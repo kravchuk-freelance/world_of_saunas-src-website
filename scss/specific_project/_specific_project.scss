@@ -1,0 +1,60 @@
+.specific_project {
+
+    &__description {
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
+
+        &_text {
+            @include font(14px, 26px, "Montserrat-Regular");
+
+            color: $white_0;
+            
+            &--color {
+                color: $yellow_0;
+            }
+
+            &--s {
+                width: 28.77%;
+            }
+
+            &--m {
+                width: 64.04%;
+            }
+        }
+    }
+
+    &__photo {
+        margin-bottom: 7.38%;
+    }
+
+    &__form {
+        padding: 0 $padding_x 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .specific_project {
+
+        &__description {
+            margin-bottom: 35px;
+        }
+
+        &__photo {
+            margin-bottom: 35px;
+        }
+
+        &__form {
+            margin-bottom: 35px;
+        }
+    }
+}

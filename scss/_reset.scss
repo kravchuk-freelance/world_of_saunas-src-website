@@ -1,0 +1,96 @@
+html {
+	font-size: $base_font_size;
+	scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Helvetica Neue', 'Arial', sans-serif;
+	// display: grid;
+	// grid-template-columns: $header_height auto;
+	// grid-template-rows: $header_height auto;
+	// grid-template-areas: 
+	// 	"side header header"
+	// 	"side main main"
+	// 	"side footer footer";
+	background-color: $black_0;
+
+	&,
+	* {
+		-ms-overflow-style: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&.overflow {
+		overflow: hidden;
+	}
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+	outline: none;
+	margin: 0;
+	border-radius: 0;
+	appearance: none;
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    // body {
+	// 	grid-template-columns: 70px auto;
+	// 	grid-template-rows: 70px auto;
+	// }
+
+	html {
+		font-size: 8px;
+	}
+}
+
+// 0 - 1023
+@include respond-to(tablet) {
+
+	html {
+		font-size: 7px;
+	}
+}
+
+// 0 - 479
+@include respond-to(mobile_small) {
+
+	html {
+		font-size: 6px;
+	}
+}

@@ -1,0 +1,54 @@
+.production {
+
+    &__description {
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
+    }
+
+    &__paragraph {
+        padding: 0 $padding_x;
+        margin-bottom: 5%;
+
+        &_inner {max-width: 1460px;
+            padding-bottom:  5%;
+            border-bottom: 1px solid $gray_0;
+            margin: 0 auto;
+        }
+    }
+
+    &__form {
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .production {
+
+        &__description {
+            margin-bottom: 45px;
+        }
+
+        &__paragraph {
+            margin-bottom: 45px;
+
+            &_inner {
+                padding-bottom: 45px;
+            }
+        }
+
+        &__form {
+            margin-bottom: 40px;
+        }
+    }
+}

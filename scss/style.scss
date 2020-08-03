@@ -1,0 +1,81 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "extends.scss";
+@import "reset.scss";
+
+// GENERAL
+// Animation
+@import "general/animation/animation.scss";
+// Header
+@import "general/header/header.scss";
+// Side
+@import "general/side/side.scss";
+// Menu
+@import "general/menu/menu.scss";
+// Popup Search
+@import "general/popup_search/popup_search.scss";
+// Popup Callback
+@import "general/popup_callback/popup_callback.scss";
+// Popup Thanks
+@import "general/popup_thanks/popup_thanks.scss";
+// Main
+@import "general/main/main.scss";
+// Footer
+@import "general/footer/footer.scss";
+// Form
+@import "general/form/form.scss";
+// Breadcrumb
+@import "general/breadcrumb/breadcrumb.scss";
+// Pagination
+@import "general/pagination/pagination.scss";
+// Page head
+@import "general/page_head/page_head.scss";
+// Page description
+@import "general/page_description/page_description.scss";
+// Page gallery
+@import "general/page_gallery/page_gallery.scss";
+// Page construction
+@import "general/page_construction/page_construction.scss";
+// Page photo horizontal
+@import "general/page_photo_horizontal/page_photo_horizontal.scss";
+// Paragraph with columns
+@import "general/paragraph_col/paragraph_col.scss";
+// Page list with icons
+@import "general/page_list/page_list.scss";
+// Dropdown list
+@import "general/dropdown/dropdown";
+
+
+// Home
+@import "home/home.scss";
+// Error
+@import "error/error.scss";
+// Contacts
+@import "contacts/contacts.scss";
+// About
+@import "about/about.scss";
+// Construction
+@import "construction/construction.scss";
+// Dealers
+@import "dealers/dealers.scss";
+// Service
+@import "service/service.scss";
+// Production
+@import "production/production.scss";
+// Designing baths
+@import "projects/projects.scss";
+// Designing specific baths
+@import "specific_project/specific_project.scss";
+// Repair
+@import "repair/repair.scss";
+// Portfolio
+@import "portfolio/portfolio.scss";
+// News
+@import "news/news.scss";
+// Specific news
+@import "specific_news/specific_news.scss";
+// Instructions
+@import "instructions/instructions.scss";
+// Search
+@import "search/search.scss";

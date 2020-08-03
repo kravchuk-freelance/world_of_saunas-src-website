@@ -1,0 +1,69 @@
+// <div class="breadcrumb">
+//     <ul class="breadcrumb__list">
+//         <li class="breadcrumb__item">
+//             <a href="index.html" class="breadcrumb__link">
+//                 Головна
+//             </a>
+//         </li>
+//         <li class="breadcrumb__item">
+//             Про компанію
+//         </li>
+//     </ul>
+// </div>
+// <p class="page_head__title">
+//     Про компанію
+// </p>
+
+.breadcrumb {
+    margin-bottom: 45px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        @include font(14px, 20px, "Montserrat-Regular");
+
+        display: flex;
+        padding-right: 7px;
+        color: $gray_11;
+
+        &:before {
+            content: "/\00a0";
+            padding-right: 7px;
+            color: $gray_1;
+        }
+
+        &:first-child {
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__link {
+        @include font(14px, 20px, "Montserrat-Regular");
+
+        color: $gray_1;
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .breadcrumb {
+        margin-bottom: 60px;
+
+        &__item {
+            font-size: 1.83rem;
+            line-height: 2.67rem;
+        }
+
+        &__link {
+            font-size: 1.83rem;
+            line-height: 2.67rem;
+        }
+    }
+}

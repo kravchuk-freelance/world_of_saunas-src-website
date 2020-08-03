@@ -1,0 +1,29 @@
+.main {
+    // grid-area: main;
+    width: calc(100% - 90px);
+    min-height: calc(100vh - 90px);
+    margin-left: auto;
+    transition: 0.2s;
+
+    &.blur {
+        filter: blur(6px);
+    }
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    .main {
+        width: calc(100% - 70px);
+        min-height: calc(100vh - 70px);
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .main {
+        width: 100%;
+        min-height: calc(100vh - 56px);
+    }
+}

@@ -1,0 +1,209 @@
+.dealers {
+    display: flex;
+
+    &__left {
+        width: 55%;
+        padding: 65px $padding_x;
+
+        &_inner {
+            max-width: 600px;
+            margin-left: 170px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 16.67%;
+
+        &_title {
+            @include font(60px, 90px, "Montserrat-Bold");
+
+            color: $white_0;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 16.67%;
+
+        &_title {
+            @include font(14px, 24px, "Montserrat-Bold");
+
+            margin-bottom: 15px;
+            color: $yellow_0;
+        }
+
+        &_description {
+            @include font(14px, 24px, "Montserrat-Regular");
+
+            margin-bottom: 15px;
+            color: $white_0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__button {
+        @include font(18px, 26px, "Montserrat-Bold");
+
+        width: 100%;
+        padding: 6.67% 15px;
+        border: 0;
+        background-color: $yellow_0;
+        margin-bottom: 95px;
+        color: $black_0;
+        cursor: pointer;
+    }
+
+    &__right {
+        width: 45%;
+        padding: 65px $padding_x;
+        background-color: $black_2;
+
+        &_inner {
+            display: flex;
+            align-items: flex-end;
+            height: 100%;
+            max-width: 570px;
+            margin-right: 170px;
+            margin-left: auto;
+        }
+    }
+
+    &__form {
+        margin-bottom: 95px;
+
+        &_bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &_hint {
+            @include font(14px, 20px, "Montserrat-Regular");
+
+            color: $gray_6;
+            text-align: right;
+        }
+    }
+
+    &__input {
+        @include font(14px, 52px, "Montserrat-Regular");
+
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-bottom: 1px solid $gray_6;
+        margin-bottom: 25px;
+        background-color: transparent;
+        color: $white_0;
+
+        &:focus {
+
+            &::placeholder {
+                color: transparent;
+            }
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+            -webkit-text-fill-color: $white_0;
+            box-shadow: 0 0 0px 1000px $black_2 inset;
+        }
+    }
+
+    &__submit {
+        @include font(16px, 30px, "Montserrat-Bold");
+
+        padding: 0;
+        border: 1px solid transparent;
+        border-bottom-color: $yellow_0;
+        background-color: transparent;
+        color: $yellow_0;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            border-color: $yellow_0;
+        }
+    }
+}
+
+// 0 - 1439
+@include respond-to(desktop_plus) {
+
+    .dealers {
+
+        &__button {
+            margin-bottom: 50px;
+        }
+
+        &__form {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+// 0 - 1279
+@include respond-to(desktop) {
+
+    .dealers {
+
+        &__left {
+
+            &_inner {
+                max-width: none;
+                margin: 0 auto;
+            }
+        }
+
+        &__right {
+
+            &_inner {
+                margin: 0 auto;
+            }
+        }
+
+        &__button {
+            margin-bottom: 0;
+        }
+
+        &__form {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .dealers {
+        flex-direction: column;
+
+        &__left {
+            width: 100%;
+            padding: 15px 15px 25px;
+        }
+
+        &__header {
+            margin-bottom: 15px;
+        }
+
+        &__paragraph {
+            margin-bottom: 25px;
+        }
+
+        &__button {
+            display: block;
+            max-width: 570px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        &__right {
+            width: 100%;
+            padding: 20px 15px 45px;
+        }
+    }
+}

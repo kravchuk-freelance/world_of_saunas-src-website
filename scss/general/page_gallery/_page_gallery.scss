@@ -1,0 +1,90 @@
+// <div class="page_gallery">
+//     <ul class="page_gallery__list">
+//         <li class="page_gallery__item">
+//             <div class="page_gallery__photo">
+//                 <img src="" alt="" class="page_gallery__img">
+//             </div>
+//         </li>
+//         <li class="page_gallery__item">
+//             <div class="page_gallery__photo">
+//                 <img src="img/about/1.png" alt="" class="page_gallery__img">
+//             </div>
+//         </li>
+//         <li class="page_gallery__item">
+//             <div class="page_gallery__photo">
+//                 <img src="" alt="" class="page_gallery__img">
+//             </div>
+//         </li>
+//         <li class="page_gallery__item">
+//             <div class="page_gallery__photo">
+//                 <img src="" alt="" class="page_gallery__img">
+//             </div>
+//         </li>
+//         <li class="page_gallery__item">
+//             <div class="page_gallery__photo">
+//                 <img src="" alt="" class="page_gallery__img">
+//             </div>
+//         </li>
+//         <li class="page_gallery__item">
+//             <div class="page_gallery__photo">
+//                 <img src="" alt="" class="page_gallery__img">
+//             </div>
+//         </li>
+//     </ul>
+// </div>
+
+.page_gallery {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        width: 16.67%;
+        padding-bottom: 16.67%;
+    }
+
+    &__photo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .page_gallery {
+
+        &__list {
+            overflow-x: scroll;
+        }
+
+        &__item {
+            flex-shrink: 0;
+            width: 200px;
+            padding-bottom: 200px;
+        }
+    }
+}
+
+// 0 - 479
+@include respond-to(mobile_small) {
+
+    .page_gallery {
+
+        &__item {
+            width: 125px;
+            padding-bottom: 125px;
+        }
+    }
+}

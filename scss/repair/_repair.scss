@@ -1,0 +1,110 @@
+.repair {
+
+    &__menu {
+        padding: 0 $padding_x;
+        margin-bottom: 3.55%;
+
+        &_inner {
+            width: 100%;
+            max-width: 1460px;
+            margin: 0 auto;
+        }
+
+        &_list {
+            padding: 3.61% 0;
+            border-top: 1px solid $gray_0;
+            border-bottom: 1px solid $gray_0;
+
+            display: grid;
+            grid-template-columns: repeat(5, minmax(85px, 250px)) 85px;
+            grid-gap: 25px;
+        }
+
+        &_link {
+            @include font(14px, 26px, "Montserrat-Regular");
+
+            display: inline-block;
+            color: $gray_1;
+
+            &:hover {
+                color: $yellow_0;
+            }
+        }
+    }
+
+    &__paragraph {
+        padding: 0 $padding_x;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
+
+        &_text {
+            @include font(14px, 26px, "Montserrat-Regular");
+
+            color: $white_0;
+            
+            &--color {
+                color: $yellow_0;
+            }
+
+            &--s {
+                width: 28.77%;
+            }
+
+            &--m {
+                width: 64.04%;
+            }
+        }
+    }
+
+    &__photo {
+        margin-bottom: 7.38%;
+    }
+
+    &__form {
+        padding: 0 15px;
+        margin-bottom: 7.38%;
+
+        &_inner {
+            @extend %center_block;
+        }
+    }
+}
+
+// 0 - 767
+@include respond-to(mobile) {
+
+    .repair {
+
+        &__menu {
+            margin-bottom: 30px;
+
+            &_list {
+                grid-template-columns: repeat(5, 120px) 85px;
+                grid-gap: 20px;
+                padding: 0 0 30px;
+                border-top: 0;
+                overflow-x: scroll;
+            }
+
+            &_link {
+                font-size: 1.83rem;
+                line-height: 3rem;
+            }
+        }
+
+        &__paragraph {
+            margin-bottom: 30px;
+        }
+
+        &__photo {
+            margin-bottom: 30px;
+        }
+
+        &__form {
+            margin-bottom: 40px;
+        }
+    }
+}
